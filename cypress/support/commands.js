@@ -17,7 +17,7 @@ Cypress.Commands.add('typer', (selector, text) => {
 });
 
 Cypress.Commands.add('invokeText', selector => {
-    cy.get(selector).invoke('text').as('@text');
+    cy.get(selector).invoke('text').as('text');
 });
 
 //
