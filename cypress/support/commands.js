@@ -8,6 +8,18 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 //
+Cypress.Commands.add('clicker', selector => {
+    cy.get(selector).click();
+});
+
+Cypress.Commands.add('typer', (selector, text) => {
+    cy.get(selector).type(text);
+});
+
+Cypress.Commands.add('invokeText', selector => {
+    cy.get(selector).invoke('text').as('@text');
+});
+
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
